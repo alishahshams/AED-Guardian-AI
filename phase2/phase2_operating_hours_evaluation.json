@@ -1,0 +1,88 @@
+{
+  "total_cases": 10,
+  "correct": 10,
+  "incorrect": 0,
+  "accuracy": 1.0,
+  "results": [
+    {
+      "name": "24 hour schedule",
+      "expected": "PARSED",
+      "predicted": "PARSED",
+      "correct": true,
+      "confidence": "HIGH",
+      "reason": "Operating-hours pattern successfully parsed."
+    },
+    {
+      "name": "Standard weekday schedule",
+      "expected": "PARSED",
+      "predicted": "PARSED",
+      "correct": true,
+      "confidence": "HIGH",
+      "reason": "Operating-hours pattern successfully parsed."
+    },
+    {
+      "name": "Weekend closed",
+      "expected": "PARSED",
+      "predicted": "PARSED",
+      "correct": true,
+      "confidence": "HIGH",
+      "reason": "Operating-hours pattern successfully parsed."
+    },
+    {
+      "name": "Schedule with remarks",
+      "expected": "PARSED_WITH_REMARKS",
+      "predicted": "PARSED_WITH_REMARKS",
+      "correct": true,
+      "confidence": "MEDIUM",
+      "reason": "Base schedule parsed, but additional remarks may modify the schedule."
+    },
+    {
+      "name": "Missing value",
+      "expected": "MISSING",
+      "predicted": "MISSING",
+      "correct": true,
+      "confidence": "LOW",
+      "reason": "Operating-hours value is missing."
+    },
+    {
+      "name": "Empty value",
+      "expected": "MISSING",
+      "predicted": "MISSING",
+      "correct": true,
+      "confidence": "LOW",
+      "reason": "Operating-hours value is missing."
+    },
+    {
+      "name": "Null value",
+      "expected": "MISSING",
+      "predicted": "MISSING",
+      "correct": true,
+      "confidence": "LOW",
+      "reason": "Operating-hours value is missing."
+    },
+    {
+      "name": "Unusual text",
+      "expected": "AMBIGUOUS",
+      "predicted": "AMBIGUOUS",
+      "correct": true,
+      "confidence": "MEDIUM",
+      "reason": "Operating-hours text contains a pattern requiring additional interpretation."
+    },
+    {
+      "name": "AM PM format",
+      "expected": "AMBIGUOUS",
+      "predicted": "AMBIGUOUS",
+      "correct": true,
+      "confidence": "MEDIUM",
+      "reason": "Operating-hours text contains a pattern requiring additional interpretation."
+    },
+    {
+      "name": "Mixed schedule",
+      "expected": "PARSED",
+      "predicted": "PARSED",
+      "correct": true,
+      "confidence": "HIGH",
+      "reason": "Operating-hours pattern successfully parsed."
+    }
+  ]
+}

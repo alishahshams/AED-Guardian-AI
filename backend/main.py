@@ -1,0 +1,60 @@
+﻿from pathlib import Path
+import json
+
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+PHASE2_DIR = BASE_DIR / "phase2"
+
+app = FastAPI(
+    title="AED Guardian AI",
+    description="AI-based AED Registry Quality Support System"
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+def load_json(filename):
+    path = PHASE2_DIR / filename
+    if not path.exists():
+        return {}
+    with open(path, "r", encoding="utf-8") as file:
+        return json.load(file)
+
+@app.get("/")
+def home():
+    return {
+        "message": "AED Guardian AI Backend Running Successfully"
+    }
+
+@app.get("/api/stats")
+def get_stats():
+    report = load_json("final_duplicate_review_report.json")
+    labels = report.get("labels", {})
+
+    return {
+        "status": report.get("status", "UNKNOWN"),
+        "unreviewed_pairs": report.get("unreviewed_pairs", 0),
+        "duplicates": labels.get("DUPLICATE", 0),
+        "not_duplicates": labels.get("NOT_DUPLICATE", 0),
+        "uncertain": labels.get("UNCERTAIN", 0),
+        "abstention_rate": report.get("abstention_rate", 0)
+    }
+
+@app.get("/api/reviews")
+def get_reviews():
+    return load_json("human_review_queue.json")
+
+@app.get("/api/operating-hours")
+def get_operating_hours():
+    return load_json("operating_hours_quality_report.json")
+
+@app.get("/api/ambiguities")
+def get_ambiguities():
+    return load_json("indoor_location_ambiguity_report.json")

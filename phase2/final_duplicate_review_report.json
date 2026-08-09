@@ -1,0 +1,25 @@
+{
+  "report": "AED Guardian AI - Final Duplicate Review",
+  "generated_at": "2026-08-09T14:46:33.497484",
+  "ai_analysis": {
+    "total_candidate_pairs": 306,
+    "labels": {
+      "DUPLICATE": 101,
+      "NOT_DUPLICATE": 40,
+      "UNCERTAIN": 165
+    }
+  },
+  "human_review": {
+    "total_flagged_pairs": 100,
+    "reviewed_pairs": 100,
+    "unreviewed_pairs": 0,
+    "labels": {
+      "DUPLICATE": 0,
+      "NOT_DUPLICATE": 97,
+      "UNCERTAIN": 3
+    },
+    "abstention_rate": 0.03,
+    "status": "COMPLETE"
+  },
+  "safety_note": "AI classifications are decision-support outputs. Candidate duplicates require human review before being treated as confirmed duplicate records."
+}

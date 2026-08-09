@@ -1,0 +1,81 @@
+{
+  "dataset": "SCDF Public Access AEDs",
+  "records_analyzed": 9644,
+  "status_distribution": {
+    "PARSED": 9575,
+    "MISSING": 7,
+    "PARSED_WITH_REMARKS": 62
+  },
+  "status_percentage": {
+    "PARSED": 99.28,
+    "MISSING": 0.07,
+    "PARSED_WITH_REMARKS": 0.64
+  },
+  "confidence_distribution": {
+    "HIGH": 9575,
+    "LOW": 7,
+    "MEDIUM": 62
+  },
+  "confidence_percentage": {
+    "HIGH": 99.28,
+    "LOW": 0.07,
+    "MEDIUM": 0.64
+  },
+  "review_queue_count": 7,
+  "review_queue_examples": [
+    {
+      "record_index": 81,
+      "operating_hours": "nan",
+      "status": "MISSING",
+      "confidence": "LOW",
+      "reason": "Operating-hours value is missing."
+    },
+    {
+      "record_index": 82,
+      "operating_hours": "nan",
+      "status": "MISSING",
+      "confidence": "LOW",
+      "reason": "Operating-hours value is missing."
+    },
+    {
+      "record_index": 83,
+      "operating_hours": "nan",
+      "status": "MISSING",
+      "confidence": "LOW",
+      "reason": "Operating-hours value is missing."
+    },
+    {
+      "record_index": 84,
+      "operating_hours": "nan",
+      "status": "MISSING",
+      "confidence": "LOW",
+      "reason": "Operating-hours value is missing."
+    },
+    {
+      "record_index": 85,
+      "operating_hours": "nan",
+      "status": "MISSING",
+      "confidence": "LOW",
+      "reason": "Operating-hours value is missing."
+    },
+    {
+      "record_index": 877,
+      "operating_hours": "nan",
+      "status": "MISSING",
+      "confidence": "LOW",
+      "reason": "Operating-hours value is missing."
+    },
+    {
+      "record_index": 1341,
+      "operating_hours": "nan",
+      "status": "MISSING",
+      "confidence": "LOW",
+      "reason": "Operating-hours value is missing."
+    }
+  ],
+  "interpretation": {
+    "scope": "This report evaluates registry operating-hours text quality only.",
+    "not_current_availability": "Parsed operating hours do not establish current AED accessibility or operational readiness.",
+    "human_review": "Ambiguous, missing, or unparsed records should be reviewed by a human registry reviewer."
+  }
+}
